@@ -1,9 +1,9 @@
 pipeline{
     agent any
     stages{
-        stage('Git pull'){
+        stage('Build'){
             steps{
-                echo 'pull git'
+                sh 'mvn --version'
             }
         }
     }
