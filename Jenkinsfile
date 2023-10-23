@@ -2,13 +2,11 @@ pipeline{
     agent any
     tools{
         maven 'maven'
-        jdk 'JDK17'
     }
     stages{
         stage('Build'){
             steps{
-                sh 'java -version'
-                sh 'mvn --version'
+                sh 'mvn install'
             }
         }
     }
