@@ -2,11 +2,11 @@ pipeline{
     agent any
     tools{
         maven '3.9.5'
-        jdk 'JDK17'
     }
     stages{
         stage('Build'){
             steps{
+                sh 'echo $JAVA_HOME'
                 sh 'mvn install'
             }
         }
