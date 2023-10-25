@@ -10,7 +10,7 @@ public class PostController {
 
     @GetMapping(value = "/get")
     public ResponseEntity<String> getPost(@RequestParam Long id){
-        return new ResponseEntity<>("oke okesssss", HttpStatus.OK);
+        return new ResponseEntity<>("test jenkins ", HttpStatus.OK);
     }
 
 
