@@ -5,12 +5,20 @@ pipeline{
         jdk 'jdk-17'
     }
     stages{
-        stage('Build'){
+        stage('Maven Build'){
             steps{
-                sh 'echo $JAVA_HOME'
+                sh 'mvn clean'
                 sh 'mvn install'
             }
         }
+        stage('Docker Build'){
+            steps{
+                sh 'docker compose build'
+                sh 'docker compose push'
+            }
+        }
+
+
     }
     post {
             always {

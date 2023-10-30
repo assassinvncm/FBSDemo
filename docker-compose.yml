@@ -1,0 +1,5 @@
+version: '2'
+services:
+  video-service:
+    image: assassinvncm/post-service:latest
+    build: .
