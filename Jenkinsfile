@@ -14,6 +14,7 @@ pipeline{
         }
         stage('Docker Build'){
             steps{
+                sh 'docker --version'
                 sh 'docker compose build'
                 sh 'docker compose push'
             }

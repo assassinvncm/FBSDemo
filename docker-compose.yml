@@ -3,3 +3,5 @@ services:
   video-service:
     image: assassinvncm/post-service:latest
     build: .
+    ports:
+      - "8081:8081"
