@@ -2,10 +2,10 @@ pipeline{
     agent {
         label 'docker-slave'
     }
-//     tools{
-//         maven '3.9.5'
-//         jdk 'jdk-17'
-//     }
+    tools{
+        maven '3.9.5'
+        jdk 'jdk-17'
+    }
     stages{
         stage('Maven Build'){
             steps{
